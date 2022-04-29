@@ -1,0 +1,38 @@
+//interface is member of java and it have only the abstract methods.
+//we can't create an object of interface 
+//class cannot extends interface but it implements the interface using keyword implements.
+//if a class implements an interface then it has to provide implementation for all abstract methods or
+//class must declared as abstract.
+
+1)  package interface_programs;
+
+    public interface  interface_class {
+    public abstract void test1(); //this also same
+                 void test2();   //this also same  
+}
+
+
+package interface_programs;
+
+
+public class p1 implements interface_class { //ob create using p1 for interface_class.
+public void test1()
+{
+System.out.println("from test1 of p1");
+}
+public void test2()
+{
+System.out.println("from test2 of p2");
+}
+public static void main(String[] args)
+{
+p1 ob=new p1();
+ob.test1();
+ob.test2();
+}
+}
+------------------------------
+output:
+from test1 of p1
+from test2 of p2
+------------------------------
