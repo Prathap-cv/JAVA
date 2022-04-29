@@ -1,4 +1,9 @@
 Abstraction: The process of hiding implementation and showcase functionalities.
+concreate method:Has its implementation.
+concreate class:contains only abstract methods
+abstract method: no implementation of absrtract method
+abstract class:a class contains atleast one abstract method .
+
 
 package abstraction_programs;
 
