@@ -36,3 +36,57 @@ output:
 from test1 of p1
 from test2 of p2
 ------------------------------
+
+2) Inheritance wrt interface
+
+
+public interface Inter1 {
+    public abstract void test1();
+}
+----
+
+public interface inter2 extends Inter1 {
+    public abstract void test2();
+}
+----
+
+public interface inter3 extends inter2 {
+    public abstract void test3();
+}
+----
+
+package interface_programs;
+
+
+public class pp implements Inter1,inter2,inter3 {
+public void test1()
+{
+System.out.println("from test1 of pp");
+}
+public void test2()
+{
+System.out.println("from test2 of pp");
+}
+public void test3()
+{
+System.out.println("from test3 of pp");
+}
+public static void main(String[] args)
+{
+pp ob=new pp();
+ob.test1();
+ob.test2();
+ob.test3();
+pp ob1=ob; //upcasting
+System.out.println("-----------------------");
+ob1.test1();
+}
+}
+-----
+output:
+from test1 of pp
+from test2 of pp
+from test3 of pp
+-----------------------
+from test1 of pp
+
