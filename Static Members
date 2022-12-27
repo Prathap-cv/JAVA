@@ -1,0 +1,33 @@
+//we more than a class gets genarated after the excution of java file(any one of class)
+//we cant have multiple classes declared as public if they are present in same java file.
+//the class specified pulic AS of a java file and name of saving of file name should be same.
+//static variable and static block will executes before the main execution.
+//static methods will excute after the main and when its to be called.
+public class h15 //declare public not manditory.
+{
+    static //static block
+    {
+        System.out.println("form static block of h15");
+    }
+    static int a=100;
+    public static void test() {
+        System.out.println("from static method test of h15");
+    }
+    public static void main(String[] args) {
+        System.out.println(h15.a);
+        System.out.println(h16.b);
+        h15.test();
+        h16.test();
+    }
+}
+class h16
+{
+    static
+    {
+        System.out.println("form static blaock of h16");
+    }
+    static int b=200;
+    public static void test() {
+        System.out.println("from static method of test of h16");
+    }
+}
