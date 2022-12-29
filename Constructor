@@ -1,0 +1,49 @@
+//user defined datatype is called as non-primitive datatype.
+//example:::class name,interface name.
+//reference variable:variable of a non primitive datatype.
+//constructor:-constructor  is a non-static memeber of a class.if a programmer not specify a constructor then jvm will only introduce the constructor in a class.
+class h18
+{
+    int a=100;
+    int b=200;
+    public h18(int a)//we can define a constructor to accept the arguments of different datatype.
+                    //constructor is used to intialize the non-static memnber of a class.
+    {
+        int  s=a;
+        System.out.println(s);//before the 
+        }
+    public static void main(String[] args) {
+        h18 ob1=new h18(100);
+        h18 ob2=new h18(200);
+        h18 ob3=new h18(300);
+        System.out.println(ob3.a);
+        System.out.println(ob1.b);
+        System.out.println(ob2.a);
+        System.out.println(ob1);
+    }
+}
+
+
+
+
+
+constructor with arguments.
+class h19 {
+    int sid;
+    String sname;
+    String branch;
+    public h19(int x,String y,String z)
+    {
+        sid=x;
+        sname=y;
+        branch=z;
+    }
+    public static void main(String[] args) {
+        h19  ob1=new h19(01, "prathap", "cse" );
+        h19  ob2=new h19(02, "parthu", "ec");
+        h19  ob3=new h19(03, "pajju", "mech");
+        System.out.println(ob1.sid+" "+ob1.sname+" "+ob1.branch);
+        System.out.println(ob2.sid+" "+ob2.sname+" "+ob2.branch);
+        System.out.println(ob3.sid+" "+ob3.sname+" "+ob3.branch);
+    }
+}
