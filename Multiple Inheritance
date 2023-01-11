@@ -1,0 +1,50 @@
+//multiple inheritance:Multiple inheritance is not supported in java due to the diamond problem.
+
+//reasons::1.There will be confusion for the super() statement for child class constructor to which parent class constructor to invoke.
+//2.If a parents class having members with same name then there will a confusion for the child class object.
+
+package inheritance_programs;
+
+public class a {
+int a=100;
+	public a() {
+		// TODO Auto-generated constructor stub
+	}
+	public void test()
+	{
+		System.out.println("form class a method");
+}
+}
+.....................
+package inheritance_programs;
+
+public class b {
+int c=100;
+	public b() {
+		// TODO Auto-generated constructor stub
+	}
+	public void test()
+	{
+		System.out.println("from class b method");
+	}
+
+}
+
+
+..............
+package inheritance_programs;
+
+public class c extends a,b
+{
+
+	public c()
+	{
+		
+	}
+	private void psvm() {
+		// TODO Auto-generated method stub
+		c ob=new c();
+	}
+
+}
+
