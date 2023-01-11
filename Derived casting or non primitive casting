@@ -1,0 +1,98 @@
+upcasting::Converting object from child class type to parent super class type is called upcasting.
+it reduce the visibility,to get accceses to the parent class members but not possible to acceses all child class members using this feauters.
+
+
+package inheritance_programs;
+
+public class uc {
+int a=100;
+public void test()
+{
+	System.out.println("from test");
+}
+	public static void main(String[] args)
+	{
+		
+	}
+}
+
+
+package inheritance_programs;
+
+public class uc1 extends uc {
+int b=200;
+public void test1()
+{
+	System.out.println("from test1 ");
+}
+public static void main(String[]  args)
+{
+uc1 ob1=new uc1();
+System.out.println(ob1.a);
+ob1.test();
+System.out.println(ob1.b);
+ob1.test1();
+System.out.println("--------------------------");
+uc ob2=ob1;  //upcasting :gives accses to parent class members but not for child class.
+System.out.println(ob2.a);
+ob2.test();
+
+System.out.println(ob1);
+System.out.println(ob2);
+}
+}
+
+output:
+100
+from test
+200
+from test1 
+--------------------------
+100
+from test
+inheritance_programs.uc1@1e643faf
+inheritance_programs.uc1@1e643faf
+
+
+package inheritance_programs;
+
+public class uc2 extends uc1 {
+	int c=300;
+	public void test2()
+	{
+		System.out.println("from test3 of uc2");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		uc2 ob1=new uc2();
+		System.out.println(ob1.a);
+		ob1.test();
+		System.out.println(ob1.b);
+		ob1.test1();
+		System.out.println(ob1.c);
+		ob1.test2();
+		System.out.println("----------------------");
+		uc1 ob2=ob1;
+		System.out.println(ob2.a);
+		ob2.test();
+		System.out.println(ob2.b);
+		ob2.test1();
+		System.out.println(ob1);
+		System.out.println(ob2);
+	}
+
+}
+
+100
+from test
+200
+from test1 
+300
+from test3 of uc2
+----------------------
+100
+from test
+200
+from test1 
+inheritance_programs.uc2@6e8dacdf
+inheritance_programs.uc2@6e8dacdf
