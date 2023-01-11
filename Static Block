@@ -1,0 +1,32 @@
+package pack2;
+
+public class a1 {
+	{
+		System.out.println("from non static block of a1");
+	}
+	static 
+	{
+		System.out.println("form static block of a1");
+	}
+	
+	public a1() {
+		System.out.println("from constructor of a1");
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		a1 s=new a1();
+		System.out.println(s);
+	}
+
+}
+//static block or non static block either execute first before the constructor.
+//static block will execute before the non static and constructor.
+
+
+output:
+form static block of a1
+from non static block of a1
+from constructor of a1
+pack2.a1@3b6eb2ec
