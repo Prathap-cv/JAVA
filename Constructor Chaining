@@ -1,0 +1,67 @@
+//constructor chaining :: During inheritance the child class constructor is called,even the parent class constructor also get executed.
+
+package inheritance_programs;
+
+public class p1 {
+	int   a=100;
+	int c;
+	public void test1()
+	{
+		System.out.println("form test of p1");
+	}
+	public p1()
+	{
+		
+		System.out.println("from no arg constructor from the class p1");
+	}
+	public p1(int v)
+	{
+		this.c=v;
+		System.out.println("from arguments constructor of p1");
+	}
+	public static void main(String[] args)
+	{
+		p1 ob1=new p1(900);
+		System.out.println(ob1.c);
+		ob1.test1();
+	}
+}
+..............
+
+package inheritance_programs;
+
+public class p2 extends p1 {
+int b=200;
+
+public static  void test2()
+{
+	System.out.println("from test 2 of p2");
+}
+public p2()
+{
+
+	System.out.println("form no arg constructor of  class p2");
+}
+public p2(int v)
+{
+	this.c=v;
+}
+public static void main(String[] args) {
+	p2 ob2=new p2(600);
+	System.out.println(ob2.a);
+	ob2.test1();
+	System.out.println(ob2.b);
+	p2.test2();
+	System.out.println("from main of p2");
+	System.out.println(ob2.c);
+	}
+}
+
+output:
+from no arg constructor from the class p1
+100
+form test of p1
+200
+from test 2 of p2
+from main of p2
+600
