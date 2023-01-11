@@ -1,0 +1,50 @@
+package inheritance_programs;
+
+public class uc {
+int a=100;
+public void test()
+{
+	System.out.println("from test");
+}
+	public static void main(String[] args)
+	{
+		
+	}
+}
+
+
+
+package inheritance_programs;
+
+public class uc1 extends uc {
+int b=200;
+public void test1()
+{
+	System.out.println("from test1 ");
+}
+public static void main(String[]  args)
+{
+uc ob1=new uc1();
+System.out.println(ob1.a);
+ob1.test();
+System.out.println("--------------------------");
+uc1 ob2=(uc1)ob1;  // down casting : converting the object from parent class to child class type.
+System.out.println(ob2.a);
+ob2.test();
+System.out.println(ob2.b);
+ob2.test1();
+System.out.println(ob1);
+System.out.println(ob2);
+}
+}
+
+
+100
+from test
+--------------------------
+100
+from test
+200
+from test1 
+inheritance_programs.uc1@1e643faf
+inheritance_programs.uc1@1e643faf
