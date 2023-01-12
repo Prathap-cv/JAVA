@@ -1,0 +1,26 @@
+classcastexception::if we try to downcast an object which does not contain the instance of the sub-class we get "classcastexception".
+
+package inheritance_programs;
+
+public class uc2 extends uc1 {
+	int c=300;
+	public void test2()
+	{
+		System.out.println("from test3 of uc2");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		uc1 ob1=new uc1();
+		uc2 ob2=(uc2)ob1;
+		System.out.println(ob1 instanceof uc1 );
+		System.out.println(ob1 instanceof uc2);
+		System.out.println(ob2 instanceof uc1);
+		System.out.println(ob2 instanceof uc2);
+		
+	}
+
+}
+
+output:
+Exception in thread "main" java.lang.ClassCastException: class inheritance_programs.uc1 cannot be cast to class inheritance_programs.uc2 (inheritance_programs.uc1 and inheritance_programs.uc2 are in module java_programs of loader 'app')
+	at java_programs/inheritance_programs.uc2.main(uc2.java:12)
