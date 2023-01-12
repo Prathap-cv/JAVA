@@ -1,0 +1,29 @@
+instanceof operator used check whether the object is instance of a that class or  an interface.
+
+
+package inheritance_programs;
+
+public class uc2 extends uc1 {
+	int c=300;
+	public void test2()
+	{
+		System.out.println("from test3 of uc2");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		uc1 ob1=new uc1();
+		uc2 ob2=new uc2();
+		System.out.println(ob1 instanceof uc1 );
+		System.out.println(ob1 instanceof uc2);
+		System.out.println(ob2 instanceof uc1);
+		System.out.println(ob2 instanceof uc2);
+		
+	}
+
+}
+
+output:
+true
+false
+true
+true
