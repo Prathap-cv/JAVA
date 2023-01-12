@@ -1,0 +1,37 @@
+To avoid class cast excepition use iinstanceof operator.
+package inheritance_programs;
+
+public class uc2 extends uc1 {
+	int c=300;
+	public void test2()
+	{
+		System.out.println("from test3 of uc2");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		uc1 ob1=new uc2();
+		if(ob1 instanceof uc2)
+		{
+			uc2 ob2=(uc2)ob1;
+			System.out.println("object downcasted");
+			System.out.println(ob1);
+			System.out.println(ob2);
+		}
+		else
+		{
+			System.out.println("unable to downcasted");
+		}
+		
+		
+	}
+
+}
+
+
+output:
+object downcasted
+
+
+
+inheritance_programs.uc2@6e8dacdf
+inheritance_programs.uc2@6e8dacdf
