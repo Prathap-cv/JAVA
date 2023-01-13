@@ -1,0 +1,40 @@
+Mainly use to modifiy the private variable in a class.
+The process of binding/wrapping of state(non-static private variable)and behavior(non-static method)of an object so that they work in single unit(class).
+
+package Encap_programs;
+
+public class Account {
+private int balance=2000;
+public char[] getbalance;    
+public double getbalance() {
+    return this.balance;
+}
+public void withdraw(int amount) 
+    {
+        this.balance=this.balance-amount;
+    }
+public void deposit(int amount)
+{
+    this.balance=this.balance+amount;
+}
+}
+
+.............
+
+package Encap_programs;
+
+public class Account_driver {
+    public static void main(String[] args) {
+    Account ob1=new Account();
+    System.out.println(ob1.getbalance());
+    ob1.withdraw(500);
+    System.out.println(ob1.getbalance());
+    ob1.deposit(1000);
+    System.out.println(ob1.getbalance());
+}      
+}
+
+output:
+2000.0
+1500.0
+2500.0
