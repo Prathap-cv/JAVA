@@ -1,0 +1,29 @@
+If a static method is called using child class referenc variable ,the child class method will get invoked and parent method will hidden is called method hiding.
+
+package poly_programs;
+
+public class A {
+    public static void test() {
+        System.out.println("from static of A");
+    }
+}
+
+
+....
+
+package poly_programs;
+
+public class B extends A {
+    public static void test() //the static method can hide the instance(normal)from A
+    {
+        System.out.println("from static of B");
+    }
+    public static void main(String[] args) {
+        B ob1=new B();
+        ob1.test();
+    }
+}
+
+
+output:
+from static of B
