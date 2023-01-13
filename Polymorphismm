@@ -1,0 +1,32 @@
+compiletime polymorphism:its achived by method overloading is called compile time polymorphism.
+
+package poly_programs;
+
+public class calculator {
+    public static void calculatte(int a,int b) {
+        System.out.println("from calculate of-1");
+        System.out.println("sum="+(a+b));
+    }
+    public static void calculatte(float a,float b) {
+        System.out.println("from calculate of-2");
+        System.out.println("sum="+(a+b));
+    }
+    public static void calculatte(int a,float b,double c) {
+        System.out.println("from calculate of-3");
+        System.out.println("sum="+(a+b+c));
+    }
+public static void main(String[] args) {
+    calculatte(10, 20);
+    calculatte(20.f, 50.f);
+    calculatte(20, 50, 20.75750000000000000000000000000060);
+    
+}
+}
+
+output:
+from calculate of-1
+sum=30
+from calculate of-2
+sum=70.0
+from calculate of-3
+sum=90.7575
