@@ -1,0 +1,57 @@
+Polymorphism is exhibiting many forms.if a stmt is executed mutiple times displays diffrent output then is called polymorphism.
+
+class employee {
+    static String cname = "Deloitte";//static variable or instance variable
+    int eid;
+    String ename;
+    double sal;
+
+    public static void work()
+    {
+        System.out.println("working in "  + employee.cname);//due static method the string acceses in static way.
+    }
+
+    public void employee_details()  
+    {
+        System.out.println("ename="+this.ename + "eid="+this.eid   +  "sal="+this.sal);//this operator is used to acces non static member of class in an object.
+    }
+
+    public employee(int eid, String ename, double sal) 
+    {                   
+        this.eid = eid;
+        this.ename = ename;
+        this.sal = sal;
+    }
+
+    public static void main(String[] args) 
+    {
+        System.out.println("*****************************");
+        employee e1 = new employee(111, "prathap", 50000); //obj created in heap memory ,its created during run time,every time separate 
+        e1.employee_details();                             //memeory allocation will created in heap memory.
+        e1.work();
+        System.out.println("*****************************");
+        employee e2 = new employee(222, "rana", 10000);//the value of non static variable/method is modifiable.
+        e2.employee_details();
+        employee.work();
+        System.out.println("*****************************");
+        employee e3 = new employee(333, "singh",20000);
+        e3.employee_details();
+        e3.work();
+        System.out.println("*****************************");
+        System.out.println(e1);
+        System.out.println(e2);
+        System.out.println(e3);
+        
+    }
+}
+
+
+output:
+ename=prathapeid=111sal=30000.0
+working inDeloitte
+*******************************
+ename=amruthaeid=222sal=100.0
+working inDeloitte
+***************
+ename=lisaeid=333sal=450000.0
+working inDeloitte
