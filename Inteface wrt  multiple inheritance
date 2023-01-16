@@ -1,0 +1,47 @@
+package Interface_programs;
+
+public interface I1 
+{
+public abstract void test1(); //same... 
+void test2();  //same... (understand by jvm to know its an interface method)
+} 
+
+//interface is memeber of java where we have only abstract methods.
+//the methods in interface is default public and abstract.
+
+..............
+
+package Interface_programs;
+
+public interface I2 {
+    void test1();
+    public abstract void test2();
+}
+
+
+...............
+
+package Interface_programs;
+
+public class A implements I1,I2 
+{
+    public void test1()
+    {
+        System.out.println("from test1 of A");
+    }
+    public void test2()
+    {
+        System.out.println("from test2 of b");
+    }
+    public static void main(String[] args) {
+        A ob1=new A();
+        ob1.test1();
+        ob1.test2();
+    }
+}
+
+
+output:
+
+from test1 of A
+from test2 of b
